@@ -126,3 +126,8 @@ if __name__ == "__main__":
     model_inference = Inference(model_path)
 
     test_model(model_inference, model_dir, test_dir)
+    
+import mlflow.keras
+mlflow.autolog()
+with mlflow.start_run():
+    print('toto')
